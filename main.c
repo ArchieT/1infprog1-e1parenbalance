@@ -85,7 +85,13 @@ int main() {
         }
         koniecno:
         free(t);
-        printf("No\n"); continue;
+        printf("No\n");
+        while(1) {
+            *c = (char)getchar();
+            if(*c=='(' || *c==')' || *c=='[' || *c==']') continue;
+            else break;
+        }
+        continue;
         koniecyes:
         free(t);
         printf("Yes\n");
