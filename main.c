@@ -36,7 +36,7 @@ int main() {
                         t = realloc(t,d);
                         if(t==NULL) goto koniecswitcha;
                     } else {
-                        free(t);
+                        /*free(t);*/
                         goto koniecswitcha;
                     }
                     goto koniecswitcha;
@@ -47,14 +47,14 @@ int main() {
                         t = realloc(t,d);
                         if(t==NULL) goto koniecswitcha;
                     } else {
-                        free(t);
+                        /*free(t);*/
                         goto koniecswitcha;
                     }
                     goto koniecswitcha;
                 case '\n':
                 default:
                     if(t==NULL) goto koniecpetli;
-                    free(t);
+                    /*free(t);*/
                     goto koniecpetli;
             }
             koniecswitcha:
