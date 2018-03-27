@@ -21,17 +21,17 @@ int main() {
                     if(t==NULL && d>0) goto koniecswitcha;
                     d+= sizeof(what);
                     t = realloc(t,d);
-                    *(t+d) = paren;
+                    *(t+d-sizeof(what)) = paren;
                     goto koniecswitcha;
                 case '[':
                     if(t==NULL && d>0) goto koniecswitcha;
                     d+= sizeof(what);
                     t = realloc(t,d);
-                    *(t+d) = bracket;
+                    *(t+d-sizeof(what)) = bracket;
                     goto koniecswitcha;
                 case ')':
                     if(t==NULL) goto koniecswitcha;
-                    if(*(t+d)==paren) {
+                    if(*(t+d-sizeof(what))==paren) {
                         d-= sizeof(what);
                         t = realloc(t,d);
                         if(t==NULL) goto koniecswitcha;
@@ -42,7 +42,7 @@ int main() {
                     goto koniecswitcha;
                 case ']':
                     if(t==NULL) goto koniecswitcha;
-                    if(*(t+d)==bracket) {
+                    if(*(t+d-sizeof(what))==bracket) {
                         d-= sizeof(what);
                         t = realloc(t,d);
                         if(t==NULL) goto koniecswitcha;
