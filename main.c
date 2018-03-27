@@ -49,7 +49,7 @@ int main() {
                     } else {
                         free(t);
                         goto koniecswitcha;
-                    };
+                    }
                     goto koniecswitcha;
                 case '\n':
                 default:
