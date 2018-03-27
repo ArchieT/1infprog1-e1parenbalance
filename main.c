@@ -78,19 +78,20 @@ int main() {
                         else {
                             goto koniecyes;
                         } /*return Yes, mamy pusto*/
-                    goto koniecno; /*return No, cos ciagle zostalo*/
+                    goto koniecnofin; /*return No, cos ciagle zostalo*/
             }
             koniecswitcha:
             continue;
         }
         koniecno:
-        free(t);
-        printf("No\n");
         while(1) {
             *c = (char)getchar();
             if(*c=='(' || *c==')' || *c=='[' || *c==']') continue;
             else break;
         }
+        koniecnofin:
+        free(t);
+        printf("No\n");
         continue;
         koniecyes:
         free(t);
