@@ -1,8 +1,8 @@
-#[[e1] Parentheses Balance](https://www.mat.umk.pl:8070/ZawodyWeb/problem/5579/parentheses-balance.html)
+# [[e1] Parentheses Balance](https://www.mat.umk.pl:8070/ZawodyWeb/problem/5579/parentheses-balance.html)
 
-_Języki: c_
-_Limit czasu: 3.0 s_
-_Limit pamięci: 0 MB_ 
+ * _Języki: c_
+ * _Limit czasu: 3.0 s_
+ * _Limit pamięci: 0 MB_ 
 
 You are given a string consisting of parentheses () and []. A string of this type is said to be correct:
 
