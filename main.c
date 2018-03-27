@@ -52,9 +52,9 @@ int main() {
                             t=(*tt).poprz;
                             free(tt);
                         }
-                        else goto koniecno; //return No, bo za duzo zamykajacych parenow
+                        else goto koniecno; /*return No, bo za duzo zamykajacych parenow*/
                     if((*t).wha==paren) (*t).ile--;
-                    else goto koniecno; //return No, bo nie zgadzaja sie
+                    else goto koniecno; /*return No, bo nie zgadzaja sie*/
                     goto koniecswitcha;
                 case ']':
                     while((*t).ile==0)
@@ -63,9 +63,9 @@ int main() {
                             t=(*tt).poprz;
                             free(tt);
                         }
-                        else goto koniecno; //return No, bo za duzo zamykajacych bracketow
+                        else goto koniecno; /*return No, bo za duzo zamykajacych bracketow*/
                     if((*t).wha==bracket) (*t).ile--;
-                    else goto koniecno; //return No, bo nie zgadzaja sie
+                    else goto koniecno; /*return No, bo nie zgadzaja sie*/
                     goto koniecswitcha;
                 case '\n':
                 default:
@@ -77,8 +77,8 @@ int main() {
                         }
                         else {
                             goto koniecyes;
-                        } //return Yes, mamy pusto
-                    goto koniecno; //return No, cos ciagle zostalo
+                        } /*return Yes, mamy pusto*/
+                    goto koniecno; /*return No, cos ciagle zostalo*/
             }
             koniecswitcha:
             continue;
